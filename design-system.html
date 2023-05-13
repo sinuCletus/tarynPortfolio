@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Design System</h1>
+    <div class="container">
+        <section class="flow" id="colors" style="margin: 4rem 0">
+            <h2 class="letter-spacing-1 number-title"><span>01</span> colors</h2>
+
+            <div class="flex fs-300" style="flex-wrap: wrap;">
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-dark text-white" style="padding: 3rem 1rem;">
+                        #011936
+                    </div>
+                    <p>RGB 1, 25, 54</p>
+                    <p>HSL 212.8, 96.4%, 10.8%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-mgd" style="padding: 3rem 1rem;">
+                        #dc4805
+                    </div>
+                    <p>RGB 220, 72, 5</p>
+                    <p>HSL 18.7, 95.6%, 44.1%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-green" style="padding: 3rem 1rem;">
+                        #4F7255
+                    </div>
+                    <p>RGB 79, 114, 85</p>
+                    <p>HSL 130.3, 18.1%, 37.8%</p>
+                </div>
+                <div class="flow" style="flex-grow: 1;">
+                    <div class="bg-mg" style="padding: 3rem 1rem;">
+                        #F19204
+                    </div>
+                    <p>RGB 241, 146, 4</p>
+                    <p>HSL 35.9, 96.7%, 48%</p>
+                </div>
+            </div>
+        </section>
+        <section class="flow" id="typography" style="margin: 4rem 0;">
+            <h2 class="letter-spacing-1 number-title"><span>02</span> typography</h2>
+
+            <div class="flex">
+                <div class="flow" style="flex-basis: 100%;">
+                    <div> 
+                        <p class="text-dark">Heading 1 - Nato Sans - 100px</p>
+                        <p class="fs-800 uppercase">contact</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark">Heading 2 - Nato Sans - 56px</p>
+                        <p class="fs-700 uppercase">home</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark">Heading 3 - Nato Sans - 32px</p>
+                        <p class="fs-600 uppercase">title</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark">Heading 4 - Nato Sans - 28px - 4.75 Character Space</p>
+                        <p class="text-dark fs-500 uppercase letter-spacing-1">read more...</p>
+                    </div>
+                </div>
+                <div class="flow" style="flex-basis: 100%;">
+                    <div> 
+                        <p class="text-dark">Subheading 1 - Nato Sans - 28px</p>
+                        <p class="fs-500 ">Food</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark">Subheading 2 - Nato Sans - 14px - 4.7 Character Space</p>
+                        <p class="fs-200 letter-spacing-2">5/1/2021</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark">Nav Text - Nato Sans - 16px - 2.7 Character Space</p>
+                        <p class="letter-spacing-2">Europa</p>
+                    </div>
+                    <div> 
+                        <p class="text-dark fs-300">Body Text</p>
+                        <p class="fs-300">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
+                    </div>
+                </div>
+            </div>            
+        </section>
+        <section class="flow" id="interactive-elements" style="margin: 4rem 0;">
+            <h2 class="letter-spacing-1 number-title"><span>03</span>Interactive Elements</h2>
+            <!--navigation-->
+            <div>
+                <nav class="grid" >
+                    <ul class="flex primary-navigation underline-indicators letter-spacing-2">
+                        <li class="active"><a href="#">Active</a></li>
+                        <li><a href="#">Hovered/Idle</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--contact button-->
+            <div>
+                <button class="button uppercase fs-500 letter-spacing-1">Submit</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

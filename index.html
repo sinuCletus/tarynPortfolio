@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="grid">
+    <header>
+        <button class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"><span class="sr-only">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators letter-spacing-2">
+                <li class="active fs-300"><a href="#">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="flex flow">
+        <h1 class="fs-800 uppercase">Writer Name</h1>
+        <div class="grid author-profile">
+            <p class="text-dark fs-300 bio-profile square flex">
+                Who came up with Lorem Ipsum?
+                Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word.
+            </p>
+            <!--Image by Briam Cute from Pixabay-->
+            <div class="square flex image-profile"><img src="./assets/home/profile.jpg" alt="author profile picture"></div>
+        </div>
+    </main>
+
+    <footer><p>&copy;TS 2023</p></footer>
+    <script src="app.js"></script>
+</body>
+</html>
