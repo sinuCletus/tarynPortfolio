@@ -1,39 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body class="grid">
-    <header>
-        <button class="mobile-nav-toggle"
-        aria-controls="primary-navigation"
-        aria-expanded="false"><span class="sr-only">Menu</span></button>
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators letter-spacing-2">
-                <li class="active fs-300"><a href="#">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <button class="nav-toggle" aria-label="toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+    <header class="sidenav">
+      <a href="#home" class="nav-link">about</a>
+      <a href="#portfolio" class="nav-link">portfolio</a>
+      <a href="#contact" class="nav-link">contact</a>
     </header>
-    
-    <main class="flex flow">
-        <h1 class="fs-800 uppercase">Writer Name</h1>
-        <div class="grid author-profile">
-            <p class="text-dark fs-300 bio-profile square flex">
-                Who came up with Lorem Ipsum?
-                Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word.
-            </p>
-            <!--Image by Briam Cute from Pixabay-->
-            <div class="square flex image-profile"><img src="./assets/home/profile.jpg" alt="author profile picture"></div>
+    <main class="main-content">
+            <!--intro section-->
+      <section class="section-intro" id="home">
+        <h1 class="section-title section-intro__title">Hello, <span class="author">John Steinbeck</span> here.</h1>
+        <h3 class="subtitle section-intro__subtitle">Who Am I, you ask?</h3>
+        <p class="section-intro__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Autem voluptatibus reprehenderit iste fugit 
+          accusantium eaque cupiditate sed consectetur ipsam corporis ullam architecto 
+          sapiente tenetur officiis ea sequi assumenda, nihil hic.
+        </p>
+        <div class="section-intro__img" alt="author's profile image"></div>
+      </section>
+      <!--portfolio section-->
+      <section class="section-portfolio" id="portfolio">
+        <h1 class="section-title section-portfolio__title">Portfolio</h1>
+        <div class="projects">
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
+          <div class="project-item">
+            <img src="images/pdx.png" alt="project1">
+            <h3 class="subtitle section-portfolio__subtitle">Portland Airport Carpet Causes Fandemonium</h3>
+            <p class="publisher">PDX Monthly</p>
+          </div>
         </div>
+      </section>
+      <section class="section-contact" id="contact">
+        <h2 class="section-title section-contact__title">Contact</h2>
+        <h3>Say hi: <a href="mailto:example@email.com" class="email">steinbeck@eden.com</a></h3>
+      </section>
     </main>
-
-    <footer><p>&copy;TS 2023</p></footer>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

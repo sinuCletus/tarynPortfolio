@@ -1,18 +1,12 @@
-// access toggle button and navigation
-var nav = document.querySelector(".primary-navigation");
-var navToggle = document.querySelector(".mobile-nav-toggle");
-// listen for clicks on the toggle button
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
 
 navToggle.addEventListener('click', () => {
-    const visibility = nav.getAttribute("data-visible");
-    //if clicked and open, close it
-    if(visibility === "false") {
-        nav.setAttribute("data-visible", true);
-        navToggle.setAttribute("aria-expanded", true);
-    } else {
-        //if clicked and closed, open it
-        nav.setAttribute("data-visible", false);
-        navToggle.setAttribute("aria-expanded", false);
+    document.body.classList.toggle('nav-open');
+});
 
-    }
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open')
+    });
 });
