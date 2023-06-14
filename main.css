@@ -30,6 +30,8 @@ html {
 
     /* font-families */
     --ff-sans-normal: 'Noto Sans', sans-serif;
+    --ff-brush-title: 'Finger Paint', cursive;
+    --ff-brush-body: 'Nanum Brush Script', cursive;
 }
 
 @media (min-width: 35em) {
@@ -83,7 +85,9 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     color: hsl(var(--clr-dark));
-    background-color: hsl(var(--clr-white));
+    /* background-color: hsl(var(--clr-white)); */
+    background-image: url(images/wall.jpg);
+    background-size: cover;
 }
 
 /* make images easier to work with */
@@ -119,6 +123,10 @@ for accessability for folks who get motion sickness etc. */
 /* General Layouts */
 /* ------------------ */
 
+h1 {
+    font-family: var(--ff-brush-title);
+}
+
 /* ------------------ */
 /* navigation layout */
 /* ------------------ */
@@ -136,8 +144,21 @@ for accessability for folks who get motion sickness etc. */
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url(images/floral-and-wall.jpg);
-    background-size: cover;
+    background: linear-gradient(to bottom, rgb(237, 34, 36, .3),
+     rgb(243, 91, 34, .3), rgb(249, 150, 33, .3), rgb(245, 193, 30, .3), 
+     rgb(241, 235, 27, .3) 27%, rgb(241, 235, 27, .3), rgb(241, 235, 27, .3) 33%,
+      rgb(99, 199, 32, .3), rgb(12, 155, 73, .3), rgb(33, 135, 141, .3), 
+      rgb(57, 84, 165, .3), rgb(97, 55, 155, .3), rgb(147, 40, 142, .3));
+    backdrop-filter: blur(5px);
+}
+
+.img-credit,
+.sidenav a.img-credit {
+    position: relative;
+    bottom: 0;
+    font-size: x-small;
+    text-align: center;
+    color: hsl(var(--clr-white));
 }
 
 .sidenav a {
@@ -145,7 +166,7 @@ for accessability for folks who get motion sickness etc. */
     display: block;
     font-size: var(--fs-600);
     padding: .25em;
-    color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-white));
 }
 
 .nav-toggle {
@@ -281,26 +302,39 @@ section {
 
 .section-intro__title {
     grid-area: title;
+    font-family: var(--ff-brush-body);
+    animation: fadeIn 3s ease-in;
 }
+
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+    to {  
+        opacity:1;  
+    }  
+ }
+
 .author {
     background-image: linear-gradient(
-            to right, rgb(237, 34, 36), 
+            to right, black,rgb(237, 34, 36), 
             rgb(243, 91, 34), 
             rgb(249, 150, 33), 
             rgb(245, 193, 30), 
-            rgb(241, 235, 27) 27%, 
             rgb(241, 235, 27), 
-            rgb(241, 235, 27) 33%, 
+            rgb(209, 241, 27), 
+            rgb(170, 241, 27), 
             rgb(99, 199, 32), 
             rgb(12, 155, 73), 
             rgb(33, 135, 141), 
             rgb(57, 84, 165), 
             rgb(97, 55, 155), 
-            rgb(147, 40, 142));
+            rgb(147, 40, 142),
+            black);
     background-clip: text;
     color: transparent;
-    background-size: 400%;
-    animation: author-bg 8s infinite alternate;
+    background-size: 500%;
+    animation: author-bg 9s infinite alternate;
 }
 
 @keyframes author-bg {
@@ -311,6 +345,9 @@ section {
 .section-intro__subtitle {
     grid-area: subtitle;
     font-size: var(--fs-500);
+    font-family: var(--ff-brush-body);
+    animation: fadeIn 4s ease-in;
+
 }
 
 .section-intro__body {
@@ -321,7 +358,11 @@ section {
 
 .section-intro__img {
     grid-area: img;
-    background-image: linear-gradient(45deg, rgba(193,195,34, .2) 0%, rgba(253,161,45, .3) 100%), url(images/person.jpg);
+    background-image: linear-gradient(to top, rgb(237, 34, 36, .3),
+    rgb(243, 91, 34, .3), rgb(249, 150, 33, .3), rgb(245, 193, 30, .3), 
+    rgb(241, 235, 27, .3) 27%, rgb(241, 235, 27, .3), rgb(241, 235, 27, .3) 33%,
+     rgb(99, 199, 32, .3), rgb(12, 155, 73, .3), rgb(33, 135, 141, .3), 
+     rgb(57, 84, 165, .3), rgb(97, 55, 155, .3), rgb(147, 40, 142, .3)), url(images/person.jpg);
     background-size: contain;
 
     min-width: 8em;
@@ -329,6 +370,7 @@ section {
     border-radius: 50%;
     box-shadow: 2px 2px 5px;
     margin: 1em;
+    animation: fadeIn 5s ease-in;
 }
 
 /* Projects Content Layout */
@@ -345,10 +387,14 @@ section {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2em;
     row-gap: 1em;
+    margin-top: 1em;
+    background-color: hsl(var(--clr-white) / .5);
+    padding: .25em;
 }
 
 .section-portfolio__subtitle,
-.publisher  {
+.publisher {
+    font-family: var(--ff-sans-normal);
     font-size: var(--fs-300);
 }
 
@@ -366,6 +412,13 @@ section {
 
 .section-contact__title {
     font-size: var(--fs-600);
+    font-family: var(--ff-brush-title);
+}
+
+.section-contact__subtitle,
+.email {
+    font-family: var(--ff-brush-body);
+    font-size: var(--fs-500);
 }
 
 /* smaller screens main content layout */
