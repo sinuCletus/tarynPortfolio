@@ -332,6 +332,7 @@ section {
             rgb(147, 40, 142),
             black);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     background-size: 300%;
     animation: author-bg 9s infinite alternate;
