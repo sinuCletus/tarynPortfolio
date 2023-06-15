@@ -354,7 +354,6 @@ section {
 .section-intro__body {
     text-align: start;
     grid-area: body;
-    padding-inline: 6em;
 }
 
 .section-intro__img {
@@ -434,10 +433,6 @@ section {
                 "subtitle"
                 "body";
         justify-content: center;
-    }
-
-    .section-intro__body {
-        padding-inline: 2em;
     }
 
     .projects {
